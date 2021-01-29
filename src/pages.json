@@ -81,6 +81,22 @@
       }
     },
     {
+      "path": "pages/study/chimee-player",
+      "style": {
+        "navigationBarTitleText": "ChimeePlayer",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/study/define-platform/index",
+      "style": {
+        "navigationBarTitleText": "判断平台",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/case/index",
       "style": {
         "navigationBarTitleText": "案例",
