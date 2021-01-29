@@ -27,7 +27,8 @@ const LAYOUT_CONFIG = {
     { name: 'chimee-player', url: `/pages/study/chimee-player` }
   ],
   uniapp: [
-    { name: '判断平台', url: `/pages/study/define-platform/index` }
+    { name: '判断平台', url: `/pages/study/define-platform/index` },
+    { name: '生命周期', url: `/pages/study/uniapp/lifecycle` }
   ]
 }
 
