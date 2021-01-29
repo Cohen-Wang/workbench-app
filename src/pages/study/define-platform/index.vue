@@ -34,6 +34,9 @@ export default {
       a: 1
     }
   },
+  onLoad() {
+
+  },
   created() {
     this.init()
   },
