@@ -14,25 +14,25 @@
     "backgroundColor": "white",
     "list": [
       {
-        "pagePath": "pages/course/hottest-course",
+        "pagePath": "pages/home/index",
         "iconPath": "static/image/tab/home.png",
         "selectedIconPath": "static/image/tab/home-HL.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/course/course-center",
+        "pagePath": "pages/study/index",
         "iconPath": "static/image/tab/course.png",
         "selectedIconPath": "static/image/tab/course-HL.png",
-        "text": "课程中心"
+        "text": "学习"
       },
       {
-        "pagePath": "pages/exam/exam-center",
+        "pagePath": "pages/case/index",
         "iconPath": "static/image/tab/exam-center.png",
         "selectedIconPath": "static/image/tab/exam-center-HL.png",
-        "text": "考试中心"
+        "text": "案例"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/my/index",
         "iconPath": "static/image/tab/my.png",
         "selectedIconPath": "static/image/tab/my-HL.png",
         "text": "我的"
@@ -60,6 +60,38 @@
       "path": "pages/login/authenticating",
       "style": {
         "navigationBarTitleText": "登录认证",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/study/index",
+      "style": {
+        "navigationBarTitleText": "学习",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/case/index",
+      "style": {
+        "navigationBarTitleText": "案例",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": "我的",
         "backgroundColor": "#FFFFFF",
         "navigationStyle": "custom"
       }

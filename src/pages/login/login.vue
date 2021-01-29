@@ -79,8 +79,9 @@ export default {
       }
       const debug = true
       if (debug) {
+        _uni.showToast('/pages/study/index')
         uni.switchTab({
-          url: '/pages/course/hottest-course'
+          url: '/pages/study/index'
         })
       } else {
         this.loading = true
