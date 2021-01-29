@@ -57,27 +57,11 @@
       }
     },
     {
-      "path": "pages/login/login-by-username",
-      "style": {
-        "navigationBarTitleText": "登录",
-        "backgroundColor": "#FFFFFF",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/login/authenticating",
       "style": {
         "navigationBarTitleText": "登录认证",
         "backgroundColor": "#FFFFFF",
         "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/common/pdf-view",
-      "style": {
-        "navigationBarTitleText": "pdf预览",
-        "navigationBarBackgroundColor": "#3283FC",
-        "navigationBarTextStyle": "white"
       }
     }
   ]
