@@ -1,0 +1,84 @@
+{
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "WHT学习平台",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#3283FC",
+    // #ifdef APP-PLUS
+    "borderStyle": "#E8E8E8",
+    // #endif
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/course/hottest-course",
+        "iconPath": "static/image/tab/home.png",
+        "selectedIconPath": "static/image/tab/home-HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/course/course-center",
+        "iconPath": "static/image/tab/course.png",
+        "selectedIconPath": "static/image/tab/course-HL.png",
+        "text": "课程中心"
+      },
+      {
+        "pagePath": "pages/exam/exam-center",
+        "iconPath": "static/image/tab/exam-center.png",
+        "selectedIconPath": "static/image/tab/exam-center-HL.png",
+        "text": "考试中心"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/image/tab/my.png",
+        "selectedIconPath": "static/image/tab/my-HL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/reset-pwd",
+      "style": {
+        "navigationBarTitleText": "重置密码",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/login-by-username",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/authenticating",
+      "style": {
+        "navigationBarTitleText": "登录认证",
+        "backgroundColor": "#FFFFFF",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/common/pdf-view",
+      "style": {
+        "navigationBarTitleText": "pdf预览",
+        "navigationBarBackgroundColor": "#3283FC",
+        "navigationBarTextStyle": "white"
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+    "name" : "智慧互动培训平台",
+    "appid" : "__UNI__527A8A0",
+    "description" : "智慧互动培训平台",
+    "versionName" : "1.5.0",
+    "versionCode" : 10500,
+    "transformPx" : false,
+    "timeout" : {
+        "request" : "10000"
+    },
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : false,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "VideoPlayer" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>"
+                ],
+                "autoSdkPermissions" : true
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : true
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "57b7c43f510a8cfaf175bd248ac3b2a8",
+                        "appkey_android" : "57b7c43f510a8cfaf175bd248ac3b2a8"
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "src/static/android/icon/drawable-hdpi-icon.png",
+                    "xhdpi" : "src/static/android/icon/drawable-xhdpi-icon.png",
+                    "xxhdpi" : "src/static/android/icon/drawable-xxhdpi-icon.png",
+                    "xxxhdpi" : "src/static/android/icon/drawable-xxxhdpi-icon.png"
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "WHT工作平台",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "router" : {
+            "mode" : "history",
+            "base" : "/workbench-app"
+        },
+        "devServer" : {
+            "disableHostCheck" : true,
+            "port" : 3003,
+            "proxy" : {
+                "/api" : {
+                    "target" : "http://eval.dgs.cjiedata.cn:5678",
+                    "ws" : false,
+                    "changeOrigin" : true,
+                    "pathRewrite" : {
+                        "^/api" : "/api"
+                    }
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
+    }
+}

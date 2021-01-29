@@ -1,0 +1,12 @@
+/public/
+
+/src/assets/
+
+/src/common/
+/src/components/
+/src/js_sdk/
+/src/lib/
+/src/hybrid/
+/src/static/
+/*.js
+/*.json
