@@ -49,6 +49,7 @@
     "@dcloudio/uni-quickapp-webview": "^2.0.0-29820201110001",
     "@dcloudio/uni-stat": "^2.0.0-29820201110001",
     "chimee": "^0.12.0",
+    "chimee-mobile-player": "^0.2.8",
     "chimee-player": "^1.4.9",
     "chimee-plugin-center-state": "0.0.14",
     "chimee-plugin-contextmenu": "^0.1.2",

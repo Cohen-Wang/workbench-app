@@ -4,7 +4,7 @@
       <text class="text-lg">生命周期执行顺序</text>
     </view>
     <view class="padding">
-      <view v-for="(item, index) in this.lifecycle"
+      <view v-for="(item, index) in lifecycle"
             :key="index"
             class="padding bg-white radius margin-bottom">
         <text class="text-bold">{{ item }}</text>

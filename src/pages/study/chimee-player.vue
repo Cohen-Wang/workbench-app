@@ -1,28 +1,62 @@
 <template>
-  <view>
-    <!-- 视频区 -->
-    <view>
-      <view id="wrapper">
-        <!-- chimee-player -->
+  <view class="bg-gray">
+
+    <!-- 标题区 -->
+    <view class="margin-bottom bg-white">
+      <view class="padding">
+        <view class="margin-bottom-sm">
+          <text class="text-black text-bold">组件化H5播放器框架</text>
+        </view>
+        <view class="margin-bottom-sm">
+          <text class="text-gray">支持mp4、m3u8、flv 等多种格式，由奇舞团视频云前端组研发。它帮我们解决大部分的兼容性问题，能够解决包括全屏、自动播放、内联播放、直播解码等常见视频需求。 通过组件化开发，能满足业务方快速迭代、灰度发布等要求。让开发者能够轻松快捷地完成视频场景的开发</text>
+        </view>
       </view>
     </view>
-    <!-- 描述区 -->
-    <view class="padding">
+
+    <!-- web视频区 -->
+    <view class="margin-bottom bg-white">
+      <view class="padding">
+        <text class="text-black text-bold">ChimeePlayer</text>
+      </view>
       <view>
-        <text class="text-bold text-cut">我是视频的名称</text>
+        <view id="ChimeePlayerWrapper" style="min-height: 100upx; box-sizing: border-box; border: 4px solid blue;">
+          <!-- chimee-player -->
+        </view>
+        <view class="padding">
+          <text class="text-bold text-cut">...</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 移动端 -->
+    <view class="margin-bottom bg-white">
+      <view class="padding">
+        <text class="text-black text-bold">ChimeeMobilePlayer</text>
+      </view>
+      <view>
+        <view id="ChimeeMobilePlayerWrapper" style="min-height: 100upx; box-sizing: border-box; border: 4px solid blue;">
+          <!-- chimee-player -->
+        </view>
+        <view class="padding">
+          <text class="text-bold text-cut">...</text>
+        </view>
       </view>
     </view>
   </view>
 </template>
 
 <script>
-import ChimeePlayer from 'chimee-player'
+// web端
+// import ChimeePlayer from 'chimee-player'
 import Chimee from 'chimee' // 样式
 import chimeePluginControlbar from 'chimee-plugin-controlbar' // # 依赖于 chimee， 首先需要安装 chimee; # 安装控制条组件
 import chimeePluginCenterState from 'chimee-plugin-center-state' // # 依赖于 chimee， 首先需要安装 chimee; # 安装控制条组件
 import contextmenu from 'chimee-plugin-contextmenu' // 菜单
 import chimeePluginLog from 'chimee-plugin-log' // 日志
 import chimeePluginPopup from 'chimee-plugin-popup' // 模态框
+// 移动端
+import ChimeeMobilePlayer from 'chimee-mobile-player'
+import 'chimee-mobile-player/lib/chimee-mobile-player.browser.css' // 必须手动引入CSS
 
 export default {
   name: 'ChimeePlayer',
@@ -32,21 +66,24 @@ export default {
     }
   },
   created() {
-    console.groupCollapsed()
-    console.log('Chimee:', Chimee)
-    console.log('ChimeePlayer:', ChimeePlayer)
-    console.log('chimeePluginControlbar:', chimeePluginControlbar)
-    console.log('chimeePluginCenterState:', chimeePluginCenterState)
-    console.log('contextmenu:', contextmenu)
-    console.log('chimeePluginLog:', chimeePluginLog)
-    console.log('chimeePluginPopup:', chimeePluginPopup)
-    console.groupEnd()
+    // console.groupCollapsed()
+    // console.log('Chimee:', Chimee)
+    // console.log('ChimeePlayer:', ChimeePlayer)
+    // console.log('chimeePluginControlbar:', chimeePluginControlbar)
+    // console.log('chimeePluginCenterState:', chimeePluginCenterState)
+    // console.log('contextmenu:', contextmenu)
+    // console.log('chimeePluginLog:', chimeePluginLog)
+    // console.log('chimeePluginPopup:', chimeePluginPopup)
+    // console.groupEnd()
   },
   mounted() {
-    this.init()
+    this.$nextTick(() => {
+      this.H5init()
+      this.mobileInit()
+    })
   },
   methods: {
-    init() {
+    H5init() {
       // 安装插件
       Chimee.install(chimeePluginControlbar)
       Chimee.install(chimeePluginCenterState)
@@ -59,10 +96,10 @@ export default {
         offset: '50% 50%',
         width: '200px'
       }))
-      // 初始化
+      // // 初始化
       this.chimeeInstance = new Chimee({
         // video dom容器
-        wrapper: '#wrapper',
+        wrapper: '#ChimeePlayerWrapper',
         // 视频路径
         // src: 'http://chimee.org/vod/1.mp4',
         // src: `../../../assets/video/office.mp4`,
@@ -149,11 +186,27 @@ export default {
       // this.chimeeInstance[chimeePluginLog.name].open()
       // 关闭日志输出
       // chimee[myLog.name].close()
+    },
+    mobileInit() {
+      new ChimeeMobilePlayer({
+        wrapper: '#ChimeeMobilePlayerWrapper', // video dom容器
+        // src: 'http://cdn.toxicjohann.com/lostStar.mp4',
+        src: 'http://chimee.org/vod/1.mp4',
+        autoplay: false,
+        controls: true,
+        playsInline: true,
+        preload: 'auto',
+        x5VideoPlayerFullscreen: true,
+        x5VideoOrientation: 'landscape|portrait',
+        xWebkitAirplay: true,
+        muted: true
+        // removeInnerPlugins: ['chimeeMobiControlbar', 'chimeeState'] // 需要移除的插件
+      })
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+  //@import './../../style/lib/chimee-mobile-player.browser.css';
 </style>
